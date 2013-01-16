@@ -7,7 +7,7 @@ Originally designed for and in CodePen -- Fork this in CodePen and make your own
 CodePen Pro and update styles on the fly in Live View in a meeting with your client. Get your in-browser design on.
 
 ##A brief explanation
-- Start at the top of the SCSS for the most basic options, and move down for more fine-grained styling.
+- Start at the top of the SCSS for the most basic options, and move down for more fine-grained styling. (For simplicity, the SCSS is all kept in a single file. If you'd prefer to use partials, that works too.)
 
 - The SCSS is sectioned into (from top -> bottom):
   - Basic styling
