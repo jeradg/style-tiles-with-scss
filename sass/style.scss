@@ -87,10 +87,15 @@ $texture-swatch-3-background: url("../img/subtle_grunge.png") top left repeat;
 $main-background: $body-background;
 $main-padding: 20px;
 
-@mixin section-heading { /* e.g., h3's like "Possible colors", "Textures" */
-  font: italic 1.3em $heading-font-family;
-  color: #777;
-  margin-bottom: .5em;
+/* Section Headings (e.g., h3's like "Possible colors", "Textures") */
+@mixin section-heading(
+    $section-heading-font: italic 1.3em $heading-font-family, // default
+    $section-heading-color: #777, // default
+    $section-heading-margin-bottom: 0.5em // default
+  ) {
+  font: $section-heading-font;
+  color: $section-heading-color;
+  margin-bottom: $section-heading-margin-bottom;
 }
 
 /* Header */
