@@ -222,29 +222,12 @@ $texture-swatch-height: 8em;
 
 /* Adjectives */
 
-@mixin adjective-1 {
-  font: italic 1.6em/1 $heading-font-family;
-  color: $color-1;
-}
-
-@mixin adjective-2 {
-  font: bold 1.25em/1.25 $body-font-family;
-  color: $color-3;
-}
-
-@mixin adjective-3 {
-  font: 1.5em/1 $heading-font-family;
-  color: $color-4;
-}
-
-@mixin adjective-4 {
-  font: 1.6em/1.15 $heading-font-family;
-  color: $color-2;
-}
-
-@mixin adjective-5 {
-  font: bold italic 3em/.7 $heading-font-family;
-  color: $color-5;
+@mixin adjective(
+    $adjective-font,
+    $adjective-color: $color-3 // default
+  ) {
+  color: $adjective-color;
+  font: $adjective-font;
 }
 
 @mixin adjective-6 {
@@ -547,26 +530,26 @@ p[class*="font-details-"] {
 /* Adjectives
 -------------------- */
 .adjective-1 {
-  @include adjective-1;
+  @include adjective(italic 1.6em/1 $heading-font-family, $color-1);
 }
 
 .adjective-2 {
-  @include adjective-2;
+  @include adjective(bold 1.25em/1.25 $body-font-family, $color-3);
 }
 .adjective-3 {
-  @include adjective-3;
+  @include adjective(1.5em/1 $heading-font-family, $color-4);
 }
 
 .adjective-4 {
-  @include adjective-4;
+  @include adjective(1.6em/1.15 $heading-font-family, $color-2);
 }
 
 .adjective-5 {
-  @include adjective-5;
+  @include adjective(bold italic 3em/.7 $heading-font-family, $color-5);
 }
 
 .adjective-6 {
-  @include adjective-6;
+  @include adjective(bold italic 1.8em/1.1 $body-font-family, $color-3);
 }
 
 /* Footer
