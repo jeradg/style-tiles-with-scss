@@ -145,20 +145,38 @@ $color-swatch-height: 5em;
 $texture-swatch-height: 8em;
 
 /* Buttons */
-@mixin button-1 {
-  padding: $button-1-padding;
-  border-radius: $button-1-border-radius;
-  background: $button-1-background-color;
+@mixin button(
+    $btn-padding,
+    $btn-border-radius: false, // defaults to no border radius
+    $btn-background: $color-1, // defaults to color-1
+    $btn-background-hover: darken($btn-background, 15%), // defaults to $btn-background value
+    $btn-font: bold 1.25em/1 $heading-font-family, // default
+    $btn-letter-spacing: 1px, // default
+    $btn-color: lighten($btn-background, 60%), // defaults to $btn-background value
+    $btn-text-transform: true, // defaults to text-transform: uppercase
+    $btn-text-shadow: 0px -1px 0px darken($btn-background, 15%), // defaults to $btn-background value
+    $btn-transition: all 0.2s ease
+  ) {
+  background: $btn-background;
+  @if $btn-border-radius {
+    border-radius: $btn-border-radius;
+  }
+  color: $btn-color;
+  font: $btn-font;
+  letter-spacing: $btn-letter-spacing;
+  padding: $btn-padding;
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 $heading-font-family;
-  letter-spacing: 1px;
-  color: lighten($button-1-background-color, 60%);
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px darken($button-1-background-color, 15%);
-  transition: all .2s ease;
-  &:hover {
-    background: darken($button-1-background-color, 15%);
+  @if $btn-text-transform {
+    text-transform: uppercase;
+  }
+  text-shadow: $btn-text-shadow;
+  transition: $btn-transition;
+  
+  &:focus,
+  &:hover,
+  &:active {
+    background: $btn-background-hover;
   }
 }
 
@@ -228,11 +246,6 @@ $texture-swatch-height: 8em;
   ) {
   color: $adjective-color;
   font: $adjective-font;
-}
-
-@mixin adjective-6 {
-  font: bold italic 1.8em/1.1 $body-font-family;
-  color: $color-3;
 }
 
 /* Footer */
@@ -493,11 +506,21 @@ section {
 }
 
 .button-1 {
-  @include button-1
+  @include button(
+    $button-1-padding, // padding
+    $button-1-border-radius, // border radius
+    $button-1-background-color, // background color
+    darken($button-1-background-color, 15%) // hover background color
+  );
 }
 
 .button-2 {
-  @include button-2
+  @include button(
+    $button-2-padding, // padding
+    $button-2-border-radius, // border radius
+    $button-2-background-color, // background color
+    darken($button-2-background-color, 15%) // hover background color
+  );
 }
 
 /* Typography samples
