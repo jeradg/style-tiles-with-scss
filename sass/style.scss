@@ -180,23 +180,6 @@ $texture-swatch-height: 8em;
   }
 }
 
-@mixin button-2 {
-  padding: $button-2-padding;
-  border-radius: $button-2-border-radius;
-  background: $button-2-background-color;
-  text-align: center;
-  text-decoration: none;
-  font: bold 1.25em/1 $heading-font-family;
-  letter-spacing: 1px;
-  color: lighten($button-2-background-color, 60%);
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px darken($button-2-background-color, 15%);
-  transition: all .2s ease;
-  &:hover {
-    background: darken($button-2-background-color, 15%);
-  }
-}
-
 /* Typography samples */
 @mixin typography-sample-h3 {
   font: bold 2.4em/1.25 $heading-font-family;
