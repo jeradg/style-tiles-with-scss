@@ -130,16 +130,8 @@ $color-swatch-5: $color-5;
 $color-swatch-height: 5em;
 
 /* Texture swatches */
-@mixin texture-swatch-1 {
-  background: $texture-swatch-1-background;
-}
-
-@mixin texture-swatch-2 {
-  background: $texture-swatch-2-background;
-}
-
-@mixin texture-swatch-3 {
-  background: $texture-swatch-3-background;
+@mixin texture-swatch($texture-swatch-background) {
+  background: $texture-swatch-background;
 }
 
 $texture-swatch-height: 8em;
@@ -467,15 +459,15 @@ section {
 }
 
 .texture-swatch-1 {
-  @include texture-swatch-1;
+  @include texture-swatch($texture-swatch-1-background);
 }
 
 .texture-swatch-2 {
-  @include texture-swatch-2;
+  @include texture-swatch($texture-swatch-2-background);
 }
 
 .texture-swatch-3 {
-  @include texture-swatch-3;
+  @include texture-swatch($texture-swatch-3-background);
 }
 
 /* Buttons
