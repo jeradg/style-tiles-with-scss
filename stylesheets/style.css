@@ -66,7 +66,7 @@ http://www.alistapart.com/articles/style-tiles-and-how-they-work/
    v2.0 | 20110126
    License: none (public domain)
 -------------------- */
-/* line 314, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -89,35 +89,35 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 324, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 327, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 body {
   line-height: 1;
 }
 
-/* line 330, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 333, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 337, ../sass/style.scss */
+/* line 321, ../sass/style.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 341, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -125,7 +125,7 @@ table {
 
 /* Clearfix
 -------------------- */
-/* line 349, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .group:after {
   visibility: hidden;
   display: block;
@@ -134,13 +134,13 @@ table {
   height: 0;
 }
 
-/* line 356, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 * html .group {
   zoom: 1;
 }
 
 /* IE6 */
-/* line 357, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 *:first-child + html .group {
   zoom: 1;
 }
@@ -148,26 +148,26 @@ table {
 /* IE7 */
 /* General styling
 -------------------- */
-/* line 362, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 368, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 372, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 body {
   background: white;
   font: 1.6em "Droid Serif", serif;
   line-height: 1.5;
 }
 
-/* line 378, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 header, .main, footer {
   max-width: 1300px;
   margin: 0 auto;
@@ -175,31 +175,30 @@ header, .main, footer {
 
 /* Header
 -------------------- */
-/* line 386, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .header-wrapper {
   background: #9f1c19;
 }
 
-/* line 390, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 header {
   padding: 20px;
   background: #9f1c19;
 }
 
-/* line 395, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 header h1, header hgroup {
   position: relative;
   float: left;
 }
 
-/* line 400, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 header h1 {
-  font: bold 3em/1 "Open Sans", sans-serif;
   color: white;
+  font: bold 3em/1 "Open Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: -2px;
-  padding-right: .75em;
-  /* uncomment the following lines and remove the @mixin header() line above to use a logo instead of text */
+  padding-right: 0.75em;
   /*
   @include replace-with-image(
     'https://dl.dropboxusercontent.com/u/126928/img/example-company-logo.png', // logo URL
@@ -209,25 +208,25 @@ header h1 {
   */
 }
 
-/* line 412, ../sass/style.scss */
+/* line 399, ../sass/style.scss */
 header h2 {
+  color: rgba(255, 255, 255, 0.95);
   font: bold 1.6em "Open Sans", sans-serif;
-  color: rgba(255, 255, 255, 0.95);
 }
 
-/* line 416, ../sass/style.scss */
+/* line 403, ../sass/style.scss */
 header h3 {
+  color: rgba(255, 255, 255, 0.95);
   font: italic 1.2em "Open Sans", sans-serif;
-  color: rgba(255, 255, 255, 0.95);
 }
 
-/* line 420, ../sass/style.scss */
+/* line 407, ../sass/style.scss */
 header h4 {
-  font: 0.8em "Droid Serif", serif;
   color: rgba(255, 255, 255, 0.95);
+  font: 0.8em "Droid Serif", serif;
 }
 
-/* line 424, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 .project-title {
   position: relative;
   float: left;
@@ -235,66 +234,66 @@ header h4 {
 
 /* Main
 -------------------- */
-/* line 432, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .main {
   padding: 20px;
   background: white;
 }
 
-/* line 437, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 .section-heading {
   font: italic 1.3em "Open Sans", sans-serif;
   color: #777777;
   margin-bottom: 0.5em;
 }
 
-/* line 441, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 .main p {
   margin-bottom: .5em;
 }
 
-/* line 445, ../sass/style.scss */
+/* line 432, ../sass/style.scss */
 section {
   margin-bottom: 2em;
 }
 
 /* Swatches
 -------------------- */
-/* line 452, ../sass/style.scss */
+/* line 439, ../sass/style.scss */
 [class*="swatch-"] {
   height: 5em;
   border: 4px solid white;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* line 458, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 .color-swatch-1 {
   background: #9f1c19;
 }
 
-/* line 462, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 .color-swatch-2 {
   background: #65d1fb;
 }
 
-/* line 466, ../sass/style.scss */
+/* line 453, ../sass/style.scss */
 .color-swatch-3 {
   background: #05abeb;
 }
 
-/* line 470, ../sass/style.scss */
+/* line 457, ../sass/style.scss */
 .color-swatch-4 {
   background: #ff8500;
 }
 
-/* line 474, ../sass/style.scss */
+/* line 461, ../sass/style.scss */
 .color-swatch-5 {
   background: #ff241f;
 }
 
 /* Texture swatches
 -------------------- */
-/* line 481, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 [class*="texture-swatch-"] {
   overflow: hidden;
   height: 8em;
@@ -302,24 +301,24 @@ section {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* line 488, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .texture-swatch-1 {
   background: url("../img/pw_maze_white.png") top left repeat;
 }
 
-/* line 492, ../sass/style.scss */
+/* line 479, ../sass/style.scss */
 .texture-swatch-2 {
   background: url("../img/white_paperboard.png") top left repeat;
 }
 
-/* line 496, ../sass/style.scss */
+/* line 483, ../sass/style.scss */
 .texture-swatch-3 {
   background: url("../img/subtle_grunge.png") top left repeat;
 }
 
 /* Buttons
 --------------------- */
-/* line 503, ../sass/style.scss */
+/* line 490, ../sass/style.scss */
 [class*="button-"] {
   display: inline-block;
   position: relative;
@@ -327,7 +326,7 @@ section {
   margin-bottom: 1em;
 }
 
-/* line 510, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .button-1 {
   background: #05abeb;
   border-radius: 4px;
@@ -341,12 +340,12 @@ section {
   text-shadow: 0px -1px 0px #0374a0;
   transition: all 0.2s ease;
 }
-/* line 189, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 .button-1:focus, .button-1:hover, .button-1:active {
   background: #0374a0;
 }
 
-/* line 519, ../sass/style.scss */
+/* line 506, ../sass/style.scss */
 .button-2 {
   background: #ff241f;
   border-radius: 4px;
@@ -360,109 +359,109 @@ section {
   text-shadow: 0px -1px 0px #d20500;
   transition: all 0.2s ease;
 }
-/* line 189, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 .button-2:focus, .button-2:hover, .button-2:active {
   background: #d20500;
 }
 
 /* Typography samples
 --------------------- */
-/* line 531, ../sass/style.scss */
+/* line 518, ../sass/style.scss */
 .typography-samples {
   background: white;
   padding: 0;
 }
 @media (min-width: 800px) {
-  /* line 531, ../sass/style.scss */
+  /* line 518, ../sass/style.scss */
   .typography-samples {
     padding: 20px;
   }
 }
 
-/* line 535, ../sass/style.scss */
+/* line 522, ../sass/style.scss */
 h3.typography-sample {
   font: bold 2.4em/1.25 "Open Sans", sans-serif;
   margin-bottom: .25em;
   color: #363636;
 }
 
-/* line 539, ../sass/style.scss */
+/* line 526, ../sass/style.scss */
 h4.typography-sample {
   font: italic 1.5em/1.25 "Droid Serif", serif;
   margin-bottom: .25em;
   color: #363636;
 }
 
-/* line 543, ../sass/style.scss */
+/* line 530, ../sass/style.scss */
 p.typography-sample {
   font: 1em/1.5 "Droid Serif", serif;
   color: #222222;
 }
-/* line 210, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 p.typography-sample strong {
   font-weight: bold;
 }
-/* line 213, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 p.typography-sample em {
   font-style: italic;
 }
 
-/* line 547, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 a.typography-sample {
   font: bold 1em "Open Sans", sans-serif;
   color: #05abeb;
   text-decoration: none;
 }
-/* line 222, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 a.typography-sample:hover {
   color: #0088bd;
 }
 
-/* line 551, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 p[class*="font-details-"] {
   margin-top: .5em;
   margin-bottom: 2em;
   font: 0.75em/1 "Droid Serif", serif;
   color: #6f6f6f;
 }
-/* line 275, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 p[class*="font-details-"] .font-color {
   font-style: italic;
 }
 
 /* Adjectives
 -------------------- */
-/* line 557, ../sass/style.scss */
+/* line 544, ../sass/style.scss */
 .adjective-1 {
   color: #9f1c19;
   font: italic 1.6em/1 "Open Sans", sans-serif;
 }
 
-/* line 561, ../sass/style.scss */
+/* line 548, ../sass/style.scss */
 .adjective-2 {
   color: #05abeb;
   font: bold 1.25em/1.25 "Droid Serif", serif;
 }
 
-/* line 564, ../sass/style.scss */
+/* line 551, ../sass/style.scss */
 .adjective-3 {
   color: #ff8500;
   font: 1.5em/1 "Open Sans", sans-serif;
 }
 
-/* line 568, ../sass/style.scss */
+/* line 555, ../sass/style.scss */
 .adjective-4 {
   color: #65d1fb;
   font: 1.6em/1.15 "Open Sans", sans-serif;
 }
 
-/* line 572, ../sass/style.scss */
+/* line 559, ../sass/style.scss */
 .adjective-5 {
   color: #ff241f;
   font: bold italic 3em/0.7 "Open Sans", sans-serif;
 }
 
-/* line 576, ../sass/style.scss */
+/* line 563, ../sass/style.scss */
 .adjective-6 {
   color: #05abeb;
   font: bold italic 1.8em/1.1 "Droid Serif", serif;
@@ -470,18 +469,18 @@ p[class*="font-details-"] .font-color {
 
 /* Footer
 -------------------- */
-/* line 582, ../sass/style.scss */
+/* line 569, ../sass/style.scss */
 .footer-wrapper {
   background: white;
 }
 
-/* line 586, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
 footer {
   padding: 20px;
   font: italic 1em/1.5 "Open Sans", sans-serif;
   color: #222222;
 }
-/* line 255, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 footer a {
   font-weight: bold;
   color: #05abeb;
@@ -492,54 +491,54 @@ footer a {
 based on Chris Coyier's Dont Overthink It Grids
 http://css-tricks.com/dont-overthink-it-grids/
 -------------------- */
-/* line 595, ../sass/style.scss */
+/* line 582, ../sass/style.scss */
 [class*='col-'] {
   float: left;
 }
 
-/* line 597, ../sass/style.scss */
+/* line 584, ../sass/style.scss */
 .grid:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 603, ../sass/style.scss */
+/* line 590, ../sass/style.scss */
 .col-1-2 {
   width: 100%;
   /* Single-column by default */
 }
 @media (min-width: 800px) {
-  /* line 603, ../sass/style.scss */
+  /* line 590, ../sass/style.scss */
   .col-1-2 {
     /* 2-column if viewport is wide enough*/
     width: 50%;
   }
 }
 
-/* line 610, ../sass/style.scss */
+/* line 597, ../sass/style.scss */
 .col-1-3 {
   width: 100%;
 }
 @media (min-width: 800px) {
-  /* line 610, ../sass/style.scss */
+  /* line 597, ../sass/style.scss */
   .col-1-3 {
     width: 33.3333%;
   }
 }
 
-/* line 617, ../sass/style.scss */
+/* line 604, ../sass/style.scss */
 [class*="col-"] {
   padding: 0;
 }
 @media (min-width: 800px) {
-  /* line 617, ../sass/style.scss */
+  /* line 604, ../sass/style.scss */
   [class*="col-"] {
     padding-right: 2em;
   }
 }
 
-/* line 624, ../sass/style.scss */
+/* line 611, ../sass/style.scss */
 [class*="col-"]:last-of-type {
   padding-right: 0;
 }
@@ -555,44 +554,44 @@ http://css-tricks.com/dont-overthink-it-grids/
   where y = number of swatches in a grid row]
 
 */
-/* line 638, ../sass/style.scss */
+/* line 625, ../sass/style.scss */
 [class*='swatch-'] {
   float: left;
 }
 
-/* line 640, ../sass/style.scss */
+/* line 627, ../sass/style.scss */
 .swatchgrid:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 646, ../sass/style.scss */
+/* line 633, ../sass/style.scss */
 .swatch-1-2 {
   width: 49%;
 }
 
-/* line 650, ../sass/style.scss */
+/* line 637, ../sass/style.scss */
 .swatch-1-3 {
   width: 32%;
 }
 
-/* line 654, ../sass/style.scss */
+/* line 641, ../sass/style.scss */
 .swatch-1-4 {
   width: 23.5%;
 }
 
-/* line 658, ../sass/style.scss */
+/* line 645, ../sass/style.scss */
 .swatch-1-5 {
   width: 18.4%;
 }
 
-/* line 662, ../sass/style.scss */
+/* line 649, ../sass/style.scss */
 [class*="swatch-"] {
   margin-right: 2%;
 }
 
-/* line 664, ../sass/style.scss */
+/* line 651, ../sass/style.scss */
 [class*="swatch-"]:last-of-type {
   margin-right: 0;
 }

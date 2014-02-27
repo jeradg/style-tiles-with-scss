@@ -115,28 +115,12 @@ $main-padding: 20px;
 /* Header */
 $header-padding: $main-padding;
 
-@mixin header-h1 {
-  //text-indent: -9999px; /*Uncomment this line if you're replacing the text with a logo. */
-  font: bold 3em/1 $heading-font-family;
-  color: $header-color;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  padding-right: .75em;
-}
-  
-@mixin header-h2 {
-  font: bold 1.6em $heading-font-family;
-  color: rgba($header-color, .95);
-}
-
-@mixin header-h3 {
-  font: italic 1.2em $heading-font-family;
-  color: rgba($header-color, .95);
-}
-
-@mixin header-h4 {
-  font: .8em $body-font-family;
-  color: rgba($header-color, .95);
+@mixin heading(
+    $heading-font,
+    $heading-color: rgba($header-color, 0.95) // default
+  ) {
+  color: $heading-color;
+  font: $heading-font;
 }
 
 /* Colour swatches */
@@ -398,8 +382,11 @@ header h1, header hgroup {
 }
 
 header h1 {
-  @include header-h1;
-  /* uncomment the following lines and remove the @mixin header() line above to use a logo instead of text */
+  @include heading(bold 3em/1 $heading-font-family, $header-color);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  padding-right: 0.75em;
+  // To use a logo instead of text remove the all of the preceding lines and uncomment the following lines
   /*
   @include replace-with-image(
     'https://dl.dropboxusercontent.com/u/126928/img/example-company-logo.png', // logo URL
@@ -410,15 +397,15 @@ header h1 {
 }
 
 header h2 {
-  @include header-h2;
+  @include heading(bold 1.6em $heading-font-family);
 }
 
 header h3 {
-  @include header-h3;
+  @include heading(italic 1.2em $heading-font-family);
 }
 
 header h4 {
-  @include header-h4;
+  @include heading(0.8em $body-font-family);
 }
 
 .project-title {
