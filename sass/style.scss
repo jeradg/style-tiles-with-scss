@@ -87,6 +87,20 @@ $texture-swatch-3-background: url("../img/subtle_grunge.png") top left repeat;
 $main-background: $body-background;
 $main-padding: 20px;
 
+/* Image Replacement (e.g. header logo) */
+@mixin replace-with-image(
+    $ir-background, // relative to site root or full URL
+    $ir-width, // width of the image
+    $ir-height // height of the image
+  ) {
+  background: transparent url('#{$ir-background}') no-repeat 0 0;
+  color: transparent;
+  font: 0/0 a;
+  height: $ir-height;
+  text-shadow: none;
+  width: $ir-width;
+}
+
 /* Section Headings (e.g., h3's like "Possible colors", "Textures") */
 @mixin section-heading(
     $section-heading-font: italic 1.3em $heading-font-family, // default
@@ -385,6 +399,14 @@ header h1, header hgroup {
 
 header h1 {
   @include header-h1;
+  /* uncomment the following lines and remove the @mixin header() line above to use a logo instead of text */
+  /*
+  @include replace-with-image(
+    'https://dl.dropboxusercontent.com/u/126928/img/example-company-logo.png', // logo URL
+    260px, // logo width
+    122px // logo height
+  );
+  */
 }
 
 header h2 {
