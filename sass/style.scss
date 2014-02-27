@@ -176,35 +176,25 @@ $texture-swatch-height: 8em;
 }
 
 /* Typography samples */
-@mixin typography-sample-h3 {
-  font: bold 2.4em/1.25 $heading-font-family;
-  margin-bottom: .25em;
-  color: $heading-color;
-}
-
-@mixin typography-sample-h4 {
-  font: italic 1.5em/1.25 $body-font-family;
-  margin-bottom: .25em;
-  color: $heading-color;
-}
-
-@mixin typography-sample-p {
-  font: 1em/1.5 $body-font-family;
-  color: $body-color;
-  strong {
-    font-weight: bold;
+@mixin typography-sample(
+    $typography-sample-color,
+    $typography-sample-font,
+    $typography-sample-margin: 0, // defaults to no margin
+    $typography-sample-text-decoration: false, // defaults to false
+    $typography-sample-link: false // defaults to false (not a link)
+  ) {
+  color: $typography-sample-color;
+  font: $typography-sample-font;
+  margin: $typography-sample-margin;
+  @if $typography-sample-text-decoration {
+    text-decoration: $typography-sample-text-decoration;
   }
-  em {
-    font-style: italic;
-  }
-}
-
-@mixin typography-sample-a {
-  font: bold 1em $body-link-font-family;
-  color: $body-link-color;
-  text-decoration: none;
-  &:hover {
-    color: darken(saturate($body-link-color, 50%), 10%);
+  @if $typography-sample-link {
+    &:focus,
+    &:hover,
+    &:active {
+      color: darken(saturate($typography-sample-color, 50%), 10%);
+    }
   }
 }
 
@@ -520,19 +510,31 @@ section {
 }
 
 h3.typography-sample {
-  @include typography-sample-h3;
+  @include typography-sample($heading-color, bold 2.4em/1.25 $heading-font-family, 0 0 0.25em 0);
 }
 
 h4.typography-sample {
-  @include typography-sample-h4;
+  @include typography-sample($heading-color, italic 1.5em/1.25 $body-font-family, 0 0 0.25em 0);
 }
 
 p.typography-sample {
-  @include typography-sample-p;
+  @include typography-sample($body-color, 1em/1.5 $body-font-family);
+  
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
 }
 
 a.typography-sample {
-  @include typography-sample-a;
+  @include typography-sample(
+    $body-link-color, 
+    bold 1em $body-link-font-family, 
+    $typography-sample-text-decoration: none,
+    $typography-sample-link: true
+  );
 }
 
 p[class*="font-details-"] {
